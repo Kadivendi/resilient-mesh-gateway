@@ -1,0 +1,69 @@
+name: resilient_mesh_gateway
+description: Infrastructure-free mesh messaging for crisis situations
+publish_to: 'none'
+version: 0.1.1+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management / DI
+  provider: ^6.1.2
+  get_it: ^8.0.0
+  flutter_riverpod: ^2.5.1
+
+  # Local storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.4
+
+  # Crypto
+  encrypt: ^5.0.3
+  cryptography: ^2.7.0
+
+  # Discovery + transport
+  nearby_connections: ^3.1.0
+  flutter_nearby_connections: ^1.1.2
+  flutter_libserialport: ^0.5.0
+  permission_handler: ^11.3.1
+
+  # Network discovery
+  network_info_plus: ^6.0.0
+  connectivity_plus: ^6.1.0
+  device_info_plus: ^10.1.2
+  http: ^1.2.0
+
+  # UI components
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.10+1
+  intl: ^0.19.0
+  uuid: ^4.5.1
+
+  # Utilities
+  logger: ^2.4.0
+  equatable: ^2.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.4.4
+  build_runner: ^2.4.13
+  flutter_lints: ^4.0.0
+  hive_generator: ^2.0.1
+
+flutter:
+  uses-material-design: true
+
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Regular.ttf
+  #       - asset: fonts/Roboto-Bold.ttf
+  #         weight: 700
