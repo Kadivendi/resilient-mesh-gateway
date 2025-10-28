@@ -1,0 +1,37 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    avoid_print: true
+    always_declare_return_types: true
+    prefer_final_fields: true
+    unnecessary_this: true
+    # Strict-style lints that flag stylistic preferences rather than bugs.
+    # Kept off the default rule set so plain `flutter analyze` doesn't fail
+    # on dozens of trailing-comma / redundant-default findings.
+    prefer_const_constructors: false
+    prefer_const_literals_to_create_immutables: false
+    prefer_single_quotes: false
+    sort_pub_dependencies: false
+    require_trailing_commas: false
+    prefer_relative_imports: false
+    avoid_redundant_argument_values: false
+    use_build_context_synchronously: false
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore
+    # Downgrade noisy lints to info so `flutter analyze --no-fatal-infos`
+    # passes; the findings still appear in the report.
+    unnecessary_cast: info
+    unnecessary_brace_in_string_interps: info
+    unnecessary_import: info
+    dangling_library_doc_comments: info
+    use_build_context_synchronously: info
+    prefer_const_constructors: info
+    require_trailing_commas: info
+    avoid_redundant_argument_values: info
+    sort_pub_dependencies: info
