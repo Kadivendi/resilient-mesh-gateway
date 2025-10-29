@@ -1,0 +1,25 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.x'
+          channel: 'stable'
+      - name: Get dependencies
+        run: flutter pub get
+      - name: Analyze
+        # --no-fatal-infos so style lints (trailing commas, redundant arg
+        # values, etc.) don't fail the build — errors and warnings still do.
+        run: flutter analyze --no-fatal-infos
+      - name: Run tests
+        run: flutter test
