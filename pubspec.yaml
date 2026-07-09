@@ -13,7 +13,7 @@ dependencies:
   # State management / DI
   provider: ^6.1.2
   get_it: ^8.0.0
-  flutter_riverpod: ^2.5.1
+  flutter_riverpod: ^2.5.2
 
   # Local storage
   hive: ^2.2.3
